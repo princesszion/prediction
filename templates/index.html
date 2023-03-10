@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
     <meta charset="UTF-8">
-    <title>ML Deployment using Heroku</title>
+    <title>ML Deployment using Flask</title>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -12,156 +11,102 @@
 
 <body>
     <div class="prediction">
-        <h1>Income Prediction</h1>
+        <h1>Player Rating Prediction Model</h1>
         <form action="{{ url_for('predict')}}"method="post">
-		<label for="age">Age</label>
-		<input type="text" id="age" name="age" required="required">
+		<label for="movement_reactions">movement_reactions</label>
+		<input type="text" id="movement_reactions" name="movement_reactions" required="required">
 		<br>
-    		<label for="workclass">Working Class</label>
-    		<select id="workclass" name="workclass" required="required">
-      			<option value="1">Federal-gov</option>
-      			<option value="2">Local-gov</option>
-      			<option value="3">Never-worked</option>
-      			<option value="4">Private</option>
-      			<option value="5">Self-emp-inc</option>
-      			<option value="6">Self-emp-not-inc</option>
-      			<option value="7">State-gov</option>
-      			<option value="8">Without-pay</option>
-    		</select>
+    		<label for="mentality_composure">mentality_composure</label>
+    		<input type="text" id="mentality_composure" name="mentality_composure" required="required"></input>
     		<br>
-		<label for="education">Education</label>
-    		<select id="education" name="education" required="required">
-      			<option value="0">10th</option>
-      			<option value="1">11th</option>
-		      	<option value="2">12th</option>
-		      	<option value="3">1st-4th</option>
-				<option value="4">5th-6th</option>
-      			<option value="5">7th-8th</option>
-      			<option value="6">9th</option>
-      			<option value="7">Assoc-acdm</option>
-      			<option value="8">Assoc-voc</option>
-      			<option value="9">Bachelors</option>
-      			<option value="10">Doctorate</option>
-      			<option value="11">HS-grad</option>
-      			<option value="12">Masters</option>
-      			<option value="13">Preschool</option>
-      			<option value="14">Prof-school</option>
-      			<option value="15">Some-college</option>
-    		</select>
-    		<br>
-    		<label for="marital-status">Marital Status</label>
-    		<select id="marital-status" name="marital-status" required="required">
-      			<option value="0">Divorced</option>
-      			<option value="1">Married-AF-spouse</option>
-      			<option value="2">Married-civ-spouse</option>
-				<option value="3">Married-spouse-absent</option>
-				<option value="4">Never-married'</option>
-				<option value="5">Separated</option>
-				<option value="6">Widowed</option>
-    		</select>
-    		<br>
-		<label for="occupation">Occupation</label>
-    		<select id="occupation" name="occupation" required="required">
-      			<option value="1">Adm-clerical</option>
-      			<option value="2">Armed-Forces</option>
-      			<option value="3">Craft-repair</option>
-      			<option value="4">Exec-managerial</option>
-      			<option value="5">Farming-fishing</option>
-      			<option value="6">Handlers-cleaners</option>
-      			<option value="7">Machine-op-inspct</option>
-      			<option value="8">Other-service</option>
-      			<option value="9">Priv-house-serv</option>
-      			<option value="10">Prof-specialty</option>
-      			<option value="11">Protective-serv</option>
-      			<option value="12">Sales</option>
-      			<option value="13">Tech-support</option>
-      			<option value="14">Transport-moving</option>
-    		</select>
-    		<br>
-    		<label for="relationship">Relationship</label>
-    		<select id="relationship" name="relationship" required="required">
-      			<option value="0">Husband</option>
-      			<option value="1">Not-in-family</option>
-      			<option value="2">Other-relative</option>
-      			<option value="3">Own-child</option>
-      			<option value="4">Unmarried</option>
-      			<option value="5">Wife</option>
-    		</select>
-    		<br>
-    		<label for="race">Race</label>
-    		<select id="race" name="race" required="required">
-      			<option value="0">Amer Indian Eskimo</option>
-      			<option value="1">Asian Pac Islander</option>
-      			<option value="2">Black</option>
-      			<option value="3">Other</option>
-      			<option value="4">White</option>
-    		</select>
-    		<br>
-    		<label for="gender">Gender</label>
-    		<select id="gender" name="gender" required="required">
-      			<option value="0">Female</option>
-      			<option value="1">Male</option>
-    		</select>
-    		<br>
-    		<label for="capital-gain">Capital Gain </label>
-    		<input type="text" id="capital-gain" name="capital-gain" required="required">btw:[0-99999]
-    		<br>
-    		<label for="capital-loss">Capital Loss </label>
-    		<input type="text" id="capital-loss" name="capital-loss" required="required">btw:[0-4356]
-    		<br>
-    		<label for="hours-per-week">Hours per Week </label>
-    		<input type="text" id="hours-per-week" name="hours-per-week" required="required">btw:[1-99]
-    		<br>
-    		<label for="native-country">Native Country</label>
-    		<select id="native-country" name="native-country" required="required">
-      			<option value="1">Cambodia</option>
-      			<option value="2">Canada</option>
-      			<option value="3">China</option>
-      			<option value="4">Columbia</option>
-      			<option value="5">Cuba</option>
-      			<option value="6">Dominican Republic</option>
-      			<option value="7">Ecuador</option>
-      			<option value="8">El Salvadorr</option>
-      			<option value="9">England</option>
-      			<option value="10">France</option>
-      			<option value="11">Germany</option>
-      			<option value="12">Greece</option>
-      			<option value="13">Guatemala</option>
-      			<option value="14">Haiti</option>
-      			<option value="15">Netherlands</option>
-      			<option value="16">Honduras</option>
-      			<option value="17">HongKong</option>
-      			<option value="18">Hungary</option>
-      			<option value="19">India</option>
-      			<option value="20">Iran</option>
-      			<option value="21">Ireland</option>
-      			<option value="22">Italy</option>
-      			<option value="23">Jamaica</option>
-      			<option value="24">Japan</option>
-      			<option value="25">Laos</option>
-      			<option value="26">Mexico</option>
-      			<option value="27">Nicaragua</option>
-      			<option value="28">Outlying-US(Guam-USVI-etc)</option>
-      			<option value="29">Peru</option>
-      			<option value="30">Philippines</option>
-      			<option value="31">Poland</option>
-      			<option value="32">Portugal</option>
-      			<option value="33">Puerto-Rico</option>
-      			<option value="34">Scotland</option>
-      			<option value="35">South</option>
-      			<option value="36">Taiwan</option>
-      			<option value="37">Thailand</option>
-      			<option value="38">Trinadad&Tobago</option>
-      			<option value="39">United States</option>
-      			<option value="40">Vietnam</option>
-      			<option value="41">Yugoslavia</option>
-    		</select>
-    		<br>
+			<br>
+			<label for = "passing">passing</label>
+			<input type="text" id="passing" name="passing" required="required">
+			<br>
+			<br>
+			<label for = "potential">potential</label>
+			<input type="text" id="potential" name="potential" required="required">
+			<br>
+			<br>
+			<label for = "dribbling">dribbling</label>
+			<input type="text" id="dribbling" name="dribbling" required="required">
+			<br>
+			<br>
+			<label for = "wage_eur">wage_eur</label>
+			<input type="text" id="wage_eur" name="wage_eur" required="required">
+			<br>
+			<br>
+			<label for = "power_shot_power">power_shot_power</label>
+			<input type="text" id="power_shot_power" name="power_shot_power" required="required">
+			<br>
+			<br>
+			<label for = "value_eur">value_eur</label>
+			<input type="text" id="value_eur" name="value_eur" required="required">
+			<br>
+			<br>
+			<label for = "release_clause_eur">release_clause_eur</label>
+			<input type="text" id="release_clause_eur" name="release_clause_eur" required="required">
+			<br>
+			<br>
+			<label for = "mentality_vision">mentality_vision</label>
+			<input type="text" id="mentality_vision" name="mentality_vision" required="required">
+			<br>
+			<br>
+			<label for = "attacking_short_passing">attacking_short_passing</label>
+			<input type="text" id="attacking_short_passing" name="attacking_short_passing" required="required">
+			<br>
+			<br>
+			<label for = "skill_long_passing">skill_long_passing</label>
+			<input type="text" id="skill_long_passing" name="skill_long_passing" required="required">
+			<br>
+			<br>
+			<label for = "physic">physic</label>
+			<input type="text" id="physic" name="physic" required="required">
+			<br>
+			<br>
+			<label for = "ls">ls</label>
+			<input type="text" id="ls" name="ls" required="required">
+			<br>
+			<br>
+			<label for = "international_reputation">international_reputation</label>
+			<input type="text" id="international_reputation" name="international_reputation" required="required">
+			<br>
+			<br>
+			<label for = "skill_ball_control">skill_ball_control</label>
+			<input type="text" id="skill_ball_control" name="skill_ball_control" required="required">
+			<br>
+			<br>
+			<label for = "age">age</label>
+			<input type="text" id="age" name="age" required="required">
+			<br>
+			<br>
+			<label for = "shooting">shooting</label>
+			<input type="text" id="shooting" name="shooting" required="required">
+			<br>
+			<br>
+			<label for = "skill_curve">skill_curve</label>
+			<input type="text" id="skill_curve" name="skill_curve" required="required">
+			<br>
+			<br>
+			<label for = "attacking_crossing">attacking_crossing</label>
+			<input type="text" id="attacking_crossing" name="attacking_crossing" required="required">
+			<br>
+			<br>
+			<label for = "mentality_aggression">potential</label>
+			<input type="text" id="mentality_aggression" name="mentality_aggression" required="required">
+			<br>
+			<br>
+			<br>
+			<label for = "power_long_shots">potential</label>
+			<input type="text" id="power_long_shots" name="power_long_shots" required="required">
+			<br>
+			<br>
+
         	<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
 
        <br>
-       <b>{{ prediction_text }}</b>
+       <h1 style="colo:green;">{{ prediction_text }}</h1>
     </div>
 </body>
 </html>
