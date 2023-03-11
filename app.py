@@ -9,7 +9,7 @@ st.markdown('Enter proposed values to predict player rating')
 st.header('Player Features')
 col1, col2 = st.columns(2)
 with col1:
-    movement_reactions = st.slider('movement_reactions', 10, 50, 100)
+    movement_reactions = st.slider(1, 10, 50, 100)
     mentality_composure = st.slider('mentality_composure', 10, 50, 100)
     passing   = st.slider('passing', 10, 50, 100)
     potential = st.slider('potential', 10, 50, 100)
