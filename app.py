@@ -7,7 +7,7 @@ st.title('Player Ratings')
 st.markdown('Enter proposed values to predict player rating')
 
 st.header('Player Features')
-col1, col2 = st.columns(2)
+col1, col2, col3, col4 = st.columns(4)
 with col1:
     movement_reactions = st.number_input('movement_reactions')
     mentality_composure = st.number_input('mentality_composure')
@@ -20,6 +20,7 @@ with col1:
     release_clause_eur = st.number_input('release_clause_eur')
     attacking_short_passing = st.number_input('attacking_short_passing')
     skill_long_passing = st.number_input('skill_long_passing')
+with col2:
     rcm = st.number_input('rcm')
     rs= st.number_input('rs')
     lcm = st.number_input('lcm')
@@ -29,6 +30,7 @@ with col1:
     st = st.number_input('st')
     #rdm = st.number_input('rdm')
     #rdm = st.slider('rdm', 10, 50, 100)
+with col3:
     cdm = st.number_input('cdm')
     ldm = st.number_input('ldm')
     lf = st.number_input('lf')
@@ -40,7 +42,7 @@ with col1:
     rw = st.number_input('rw')
     lw = st.number_input('lw')
 
-with col2:
+with col4:
     physic = st.number_input('physic')
     ls = st.number_input('ls')
     international_reputation = st.number_input('international_reputation')
