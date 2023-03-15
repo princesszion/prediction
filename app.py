@@ -28,7 +28,7 @@ with col1:
     cam = st.number_input('cam')
     st = st.number_input('st')
     #rdm = st.number_input('rdm')
-    rdm = st.slider('rdm', 10, 50, 100)
+    #rdm = st.slider('rdm', 10, 50, 100)
     cdm = st.number_input('cdm')
     ldm = st.number_input('ldm')
     lf = st.number_input('lf')
@@ -84,7 +84,7 @@ with col2:
  cam,
  st,
  rs,
- rdm,
+ #rdm,
  cdm,
  ldm,
  lf,
