@@ -58,5 +58,4 @@ with col2:
  power_long_shots,
  attacking_crossing,
  mentality_aggression]]))
-        
-        st.text(f'The player Prediction is: ',result[0])
+print(st.text(result[0]))
