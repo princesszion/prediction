@@ -26,7 +26,7 @@ with col1:
     ram = st.slider('ram', 10, 50, 100)
     cam = st.slider('cam', 10, 50, 100)
     st = st.slider('st', 10, 50, 100)
-    #rs = st.slider('rs', 10, 50, 100)
+    rs = st.slider('rs', 10, 50, 100)
     rdm = st.slider('rdm', 10, 50, 100)
     cdm = st.slider('cdm', 10, 50, 100)
 
@@ -82,7 +82,7 @@ with col2:
  ram,
  cam,
  st,
- #rs,
+ float(rs),
  rdm,
  cdm,
  ldm,
