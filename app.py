@@ -9,7 +9,7 @@ st.markdown('Enter proposed values to predict player rating')
 st.header('Player Features')
 col1, col2 = st.columns(2)
 with col1:
-    movement_reactions = st.slider('', 10, 50, 100)
+    movement_reactions = st.slider('movement_reactions', 10, 50, 100)
     mentality_composure = st.slider('mentality_composure', 10, 50, 100)
     passing   = st.slider('passing', 10, 50, 100)
     potential = st.slider('potential', 10, 50, 100)
@@ -32,30 +32,31 @@ with col2:
     shooting = st.slider('shooting ', 10, 50, 100)
     skill_curve = st.slider('skill_curve', 10, 50, 100)
     power_long_shots = st.slider('power_long_shots', 10, 50, 100)
+    mentality_vision = st.slider('mentality_vision', 10, 50, 100)
     
 
     if st.button("Predict Player"):
         result = predict(np.array([[movement_reactions,
- 'mentality_composure',
- 'passing',
- 'potential',
- 'dribbling',
- 'wage_eur',
- 'power_shot_power',
- 'value_eur',
- 'release_clause_eur',
- 'mentality_vision',
- 'attacking_short_passing',
- 'skill_long_passing',
- 'physic',
- 'ls',
- 'international_reputation',
- 'skill_ball_control',
- 'age',
- 'shooting',
- 'skill_curve',
- 'power_long_shots',
- 'attacking_crossing',
- 'mentality_aggression']]))
+ mentality_composure,
+ passing,
+ potential,
+ dribbling,
+ wage_eur,
+ power_shot_power,
+ value_eur,
+ release_clause_eur,
+ mentality_vision,
+ attacking_short_passing,
+ skill_long_passing,
+ physic,
+ ls,
+ international_reputation,
+ skill_ball_control,
+ age,
+ shooting,
+ skill_curve,
+ power_long_shots,
+ attacking_crossing,
+ mentality_aggression]]))
         
         st.text(result[0])
