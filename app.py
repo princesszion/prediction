@@ -58,4 +58,4 @@ with col2:
  power_long_shots,
  attacking_crossing,
  mentality_aggression]]))
-        print(st.text(result[0]))
+        print("The rating is"+st.text(result[0]))
