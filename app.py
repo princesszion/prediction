@@ -35,7 +35,7 @@ with col2:
     
 
     if st.button("Predict Player"):
-        result = predict(np.array([['movement_reactions',
+        result = predict(np.array([[movement_reactions,
  'mentality_composure',
  'passing',
  'potential',
