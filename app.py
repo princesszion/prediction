@@ -20,8 +20,8 @@ with col1:
     release_clause_eur = st.slider('release_clause_eur', 10, 50, 100)
     attacking_short_passing = st.slider('attacking_short_passing', 10, 50, 100)
     skill_long_passing = st.slider('skill_long_passing', 10, 50, 100)
-    rcm = st.number_input('Insert a number')
-    rs= st.number_input('Insert a number')
+    rcm = st.number_input('rcm')
+    rs= st.number_input('rs')
 
     # rcm = st.slider('rcm', 10, 50, 100)
     # lcm = st.slider('lcm', 10, 50, 100)
