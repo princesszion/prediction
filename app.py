@@ -59,4 +59,4 @@ with col2:
  attacking_crossing,
  mentality_aggression]]))
         
-        st.text(result[0])
+        st.text("The player Prediction is: "+result[0])
