@@ -26,18 +26,9 @@ with col1:
     ram = st.slider('ram', 10, 50, 100)
     cam = st.slider('cam', 10, 50, 100)
     st = st.slider('st', 10, 50, 100)
-    rs = st.slider('rs', 10, 50, 100)
+    #rs = st.slider('rs', 10, 50, 100)
     rdm = st.slider('rdm', 10, 50, 100)
     cdm = st.slider('cdm', 10, 50, 100)
-    ldm = st.slider('ldm', 10, 50, 100)
-    lf = st.slider('lf', 10, 50, 100)
-    cf = st.slider('cf', 10, 50, 100)
-    lm = st.slider('lm', 10, 50, 100)
-    rm = st.slider('rm', 10, 50, 100)
-    rwb = st.slider('rwb', 10, 50, 100)
-    lwb = st.slider('lwb', 10, 50, 100)
-    rw = st.slider('rw', 10, 50, 100)
-    lw = st.slider('lw', 10, 50, 100)
 
 
 with col2:
@@ -53,7 +44,15 @@ with col2:
     skill_curve = st.slider('skill_curve', 10, 50, 100)
     power_long_shots = st.slider('power_long_shots', 10, 50, 100)
     mentality_vision = st.slider('mentality_vision', 10, 50, 100)
-    
+    ldm = st.slider('ldm', 10, 50, 100)
+    lf = st.slider('lf', 10, 50, 100)
+    cf = st.slider('cf', 10, 50, 100)
+    lm = st.slider('lm', 10, 50, 100)
+    rm = st.slider('rm', 10, 50, 100)
+    rwb = st.slider('rwb', 10, 50, 100)
+    lwb = st.slider('lwb', 10, 50, 100)
+    rw = st.slider('rw', 10, 50, 100)
+    lw = st.slider('lw', 10, 50, 100)
 
     if st.button("Predict Player"):
         result = predict(np.array([[movement_reactions,
@@ -83,7 +82,7 @@ with col2:
  ram,
  cam,
  st,
- rs,
+ #rs,
  rdm,
  cdm,
  ldm,
