@@ -1,4 +1,4 @@
-import streamlit as st 
+import streamlit as st
 import pandas as pd
 import numpy as np
 from prediction import predict
@@ -7,41 +7,34 @@ st.title('Player Ratings')
 st.markdown('Enter proposed values to predict player rating')
 
 st.header('Player Features')
-col1, col2, col3, col4 = st.columns(4)
+col1, col2 = st.columns(2)
 with col1:
-    movement_reactions = st.number_input('movement_reactions')
-    mentality_composure = st.number_input('mentality_composure')
-    passing   = st.number_input('passing')
-    potential = st.number_input('potential')
-    dribbling = st.number_input('dribbling')
-    wage_eur = st.number_input('wage_eur')
-    power_shot_power = st.number_input('power_shot_power')
-    value_eur = st.number_input('value_eur')
-    release_clause_eur = st.number_input('release_clause_eur')
-    attacking_short_passing = st.number_input('attacking_short_passing')
-    skill_long_passing = st.number_input('skill_long_passing')
-with col2:
-    rcm = st.number_input('rcm')
-    #rs= st.number_input('rs')
-    lcm = st.number_input('lcm')
-    cm = st.number_input('cm')
-    ram = st.number_input('ram')
-    cam = st.number_input('cam')
-    st = st.number_input('st')
+    movement_reactions = st.slider('movement_reactions', 10, 50, 100)
+    mentality_composure = st.slider('mentality_composure', 10, 50, 100)
+    passing   = st.slider('passing', 10, 50, 100)
+    potential = st.slider('potential', 10, 50, 100)
+    dribbling = st.slider( 'dribbling',10, 50, 100)
+    wage_eur = st.slider('wage_eur', 10, 50, 100)
+    power_shot_power = st.slider( 'power_shot_power',10, 50, 100)
+    value_eur = st.slider('value_eur',10, 50, 100)
+    release_clause_eur = st.slider('release_clause_eur', 10, 50, 100)
+    attacking_short_passing = st.slider('attacking_short_passing', 10, 50, 100)
+    skill_long_passing = st.slider('skill_long_passing', 10, 50, 100)
 
-with col3:
-    #physic = st.number_input('physic')
-    ls = st.number_input('ls')
-    international_reputation = st.number_input('international_reputation')
-    mentality_aggression = st.number_input('mentality_aggressionmentality_aggression')
+
+with col2:
+    physic = st.slider('physic', 10, 50, 100)
+    ls = st.slider('ls', 10, 50, 100)
+    international_reputation = st.slider('international_reputation', 10, 50, 100)
+    mentality_aggression = st.slider('mentality_aggression', 10, 50, 100)
     #dribbling = st.slider( 'dribbling',10, 50, 100)
-    attacking_crossing = st.number_input('attacking_crossing')
-    skill_ball_control = st.number_input('skill_ball_control')
-    age = st.number_input('age')
-    shooting = st.number_input('shooting')
-    skill_curve = st.number_input('skill_curve')
-    power_long_shots = st.number_input('power_long_shots')
-    mentality_vision = st.number_input('mentality_vision')
+    attacking_crossing = st.slider('attacking_crossing', 10, 50, 100)
+    skill_ball_control = st.slider( 'skill_ball_control',10, 50, 100)
+    age = st.slider('age',10, 50, 100)
+    shooting = st.slider('shooting ', 10, 50, 100)
+    skill_curve = st.slider('skill_curve', 10, 50, 100)
+    power_long_shots = st.slider('power_long_shots', 10, 50, 100)
+    mentality_vision = st.slider('mentality_vision', 10, 50, 100)
 
 
     if st.button("Predict Player"):
@@ -66,11 +59,5 @@ with col3:
  skill_curve,
  power_long_shots,
  attacking_crossing,
- rcm,
- lcm,
- cm,
- ram,
- cam,
- st,
  mentality_aggression]]))
         st.text(result[0])
