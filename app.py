@@ -30,7 +30,7 @@ with col2:
     st = st.number_input('st')
 
 with col3:
-    physic = st.number_input('physic')
+    #physic = st.number_input('physic')
     ls = st.number_input('ls')
     international_reputation = st.number_input('international_reputation')
     mentality_aggression = st.number_input('mentality_aggressionmentality_aggression')
