@@ -38,9 +38,9 @@ with col3:
    #  lm = st.number_input('lm')
    #  rm = st.number_input('rm')
    #  rwb = st.number_input('rwb')
-    lwb = st.number_input('lwb')
-    rw = st.number_input('rw')
-    lw = st.number_input('lw')
+   #  lwb = st.number_input('lwb')
+   #  rw = st.number_input('rw')
+   #  lw = st.number_input('lw')
 
 with col4:
     physic = st.number_input('physic')
@@ -94,8 +94,8 @@ with col4:
  # lm,
  # rm,
  # rwb,
- lwb,
- rw,
- lw,
+ # lwb,
+ # rw,
+ # lw,
  mentality_aggression]]))
         st.text(result[0])
