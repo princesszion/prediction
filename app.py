@@ -33,7 +33,7 @@ with col2:
 with col3:
   #  cdm = st.number_input('cdm')
   #  ldm = st.number_input('ldm')
-    lf = st.number_input('lf')
+   # lf = st.number_input('lf')
     cf = st.number_input('cf')
     lm = st.number_input('lm')
     rm = st.number_input('rm')
