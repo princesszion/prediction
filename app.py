@@ -31,7 +31,7 @@ with col2:
     #rdm = st.number_input('rdm')
     #rdm = st.slider('rdm', 10, 50, 100)
 with col3:
-    cdm = st.number_input('cdm')
+  #  cdm = st.number_input('cdm')
     ldm = st.number_input('ldm')
     lf = st.number_input('lf')
     cf = st.number_input('cf')
@@ -87,7 +87,7 @@ with col4:
  st,
  #rs,
  #rdm,
- cdm,
+ #cdm,
  ldm,
  lf,
  cf,
