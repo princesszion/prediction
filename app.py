@@ -28,21 +28,8 @@ with col2:
     ram = st.number_input('ram')
     cam = st.number_input('cam')
     st = st.number_input('st')
-    #rdm = st.number_input('rdm')
-    #rdm = st.slider('rdm', 10, 50, 100)
-with col3:
-  #  cdm = st.number_input('cdm')
-  #  ldm = st.number_input('ldm')
-   # lf = st.number_input('lf')
-   #  cf = st.number_input('cf')
-   #  lm = st.number_input('lm')
-   #  rm = st.number_input('rm')
-   #  rwb = st.number_input('rwb')
-   #  lwb = st.number_input('lwb')
-   #  rw = st.number_input('rw')
-   #  lw = st.number_input('lw')
 
-with col4:
+with col3:
     physic = st.number_input('physic')
     ls = st.number_input('ls')
     international_reputation = st.number_input('international_reputation')
@@ -85,17 +72,5 @@ with col4:
  ram,
  cam,
  st,
- #rs,
- #rdm,
- #cdm,
- #ldm,
- #lf,
- # cf,
- # lm,
- # rm,
- # rwb,
- # lwb,
- # rw,
- # lw,
  mentality_aggression]]))
         st.text(result[0])
