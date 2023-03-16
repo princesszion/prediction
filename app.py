@@ -22,7 +22,7 @@ with col1:
     skill_long_passing = st.number_input('skill_long_passing')
 with col2:
     rcm = st.number_input('rcm')
-    rs= st.number_input('rs')
+    #rs= st.number_input('rs')
     lcm = st.number_input('lcm')
     cm = st.number_input('cm')
     ram = st.number_input('ram')
@@ -85,7 +85,7 @@ with col4:
  ram,
  cam,
  st,
- rs,
+ #rs,
  #rdm,
  cdm,
  ldm,
