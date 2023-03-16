@@ -34,10 +34,10 @@ with col3:
   #  cdm = st.number_input('cdm')
   #  ldm = st.number_input('ldm')
    # lf = st.number_input('lf')
-    cf = st.number_input('cf')
-    lm = st.number_input('lm')
-    rm = st.number_input('rm')
-    rwb = st.number_input('rwb')
+   #  cf = st.number_input('cf')
+   #  lm = st.number_input('lm')
+   #  rm = st.number_input('rm')
+   #  rwb = st.number_input('rwb')
     lwb = st.number_input('lwb')
     rw = st.number_input('rw')
     lw = st.number_input('lw')
@@ -90,10 +90,10 @@ with col4:
  #cdm,
  #ldm,
  #lf,
- cf,
- lm,
- rm,
- rwb,
+ # cf,
+ # lm,
+ # rm,
+ # rwb,
  lwb,
  rw,
  lw,
