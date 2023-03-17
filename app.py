@@ -26,6 +26,9 @@ with col1:
     ldm = st.slider('ldm', 10, 50, 100)
     lf = st.slider('lf', 10, 50, 100)
     cf = st.slider('cf', 10, 50, 100)
+    lm = st.slider('lm', 10, 50, 100)
+    rm = st.slider('rm', 10, 50, 100)
+    rwb = st.slider('rwb', 10, 50, 100)
 
 
 
@@ -48,8 +51,11 @@ with col2:
     ram = st.slider('ram', 10, 50, 100)
     cam = st.slider('cam', 10, 50, 100)
     st = st.slider('st', 10, 50, 100)
-    lwb = st.slider('lwb', 10, 50, 100)
+    #lwb = st.slider('lwb', 10, 50, 100)
+    lwb = st.number_input('lwb ')
 
+    rw = st.slider('rw', 10, 50, 100)
+    lw = st.slider('lw', 10, 50, 100)
 
 
     if st.button("Predict Player"):
