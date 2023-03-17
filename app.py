@@ -50,8 +50,8 @@ with col2:
     cm = st.slider('cm', 10, 50, 100)
     ram = st.slider('ram', 10, 50, 100)
     cam = st.slider('cam', 10, 50, 100)
-    st = st.slider('st', 10, 50, 100)
-    #lwb = st.slider('lwb', 10, 50, 100)
+    #st = st.slider('st', 10, 50, 100)
+    lwb = st.slider('lwb', 10, 50, 100)
     #lwb = st.number_input('lwb ')
 
     bw = st.slider('bw', 10, 50, 100)
@@ -89,7 +89,7 @@ with col2:
         # lm,
         # rm,
         # rwb,
-        # lwb,
+         lwb,
         # rw,
         # lw,
          international_reputation,
