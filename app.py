@@ -20,6 +20,12 @@ with col1:
     release_clause_eur = st.slider('release_clause_eur', 10, 50, 100)
     attacking_short_passing = st.slider('attacking_short_passing', 10, 50, 100)
     skill_long_passing = st.slider('skill_long_passing', 10, 50, 100)
+    rcm = st.slider('rcm', 10, 50, 100)
+    lcm = st.slider('lcm', 10, 50, 100)
+    cm = st.slider('cm', 10, 50, 100)
+    ram = st.slider('ram', 10, 50, 100)
+    cam = st.slider('cam', 10, 50, 100)
+    st_slider = st.slider('st', 10, 50, 100)
     rs = st.slider('rs', 10, 50, 100)
     rdm = st.slider('rdm', 10, 50, 100)
     cdm = st.slider('cdm', 10, 50, 100)
@@ -29,7 +35,9 @@ with col1:
     lm = st.slider('lm', 10, 50, 100)
     rm = st.slider('rm', 10, 50, 100)
     rwb = st.slider('rwb', 10, 50, 100)
-
+    lwb = st.slider('lwb', 10, 50, 100)
+    rw = st.slider('rw', 10, 50, 100)
+    lw = st.slider('lw', 10, 50, 100)
 
 
 with col2:
@@ -45,59 +53,47 @@ with col2:
     skill_curve = st.slider('skill_curve', 10, 50, 100)
     power_long_shots = st.slider('power_long_shots', 10, 50, 100)
     mentality_vision = st.slider('mentality_vision', 10, 50, 100)
-    rcm = st.slider('rcm', 10, 50, 100)
-    lcm = st.slider('lcm', 10, 50, 100)
-    cm = st.slider('cm', 10, 50, 100)
-    ram = st.slider('ram', 10, 50, 100)
-    cam = st.slider('cam', 10, 50, 100)
-    #st = st.slider('st', 10, 50, 100)
-    lwb = st.slider('lwb', 10, 50, 100)
-    #lwb = st.number_input('lwb ')
-
-    bw = st.slider('bw', 10, 50, 100)
-    lw = st.slider('lw', 10, 50, 100)
 
 
     if st.button("Predict Player"):
-        result = predict(np.array([[
-         movement_reactions,
-         mentality_composure,
-         passing,
-         potential,
-         dribbling,
-         wage_eur,
-         power_shot_power,
-         value_eur,
-         release_clause_eur,
-         mentality_vision,
-         attacking_short_passing,
-         skill_long_passing,
-         physic,
-         ls,
-         rcm,
-        lcm,
-        cm,
-        ram,
-        cam,
-        st,
-        rs,
-        rdm,
-        cdm,
-        ldm,
-        lf,
-        # cf,
-        # lm,
-        # rm,
-        # rwb,
-         lwb,
-        # rw,
-        # lw,
-         international_reputation,
-         skill_ball_control,
-         age,
-         shooting,
-         skill_curve,
-         power_long_shots,
-         attacking_crossing,
-         mentality_aggression]]))
+        result = predict(np.array([[movement_reactions,
+ mentality_composure,
+ passing,
+ potential,
+ dribbling,
+ wage_eur,
+ power_shot_power,
+ value_eur,
+ release_clause_eur,
+ mentality_vision,
+ attacking_short_passing,
+ skill_long_passing,
+ physic,
+ ls,
+ international_reputation,
+ skill_ball_control,
+ age,
+ shooting,
+ skill_curve,
+ power_long_shots,
+ attacking_crossing,
+ rcm,
+ lcm,
+ cm,
+ ram,
+ cam,
+ st_slider,
+ rs,
+ rdm,
+ cdm,
+ ldm,
+ lf,
+ cf,
+ lm,
+ rm,
+ rwb,
+ lwb,
+ rw,
+ lw,
+ mentality_aggression]]))
         st.text(result[0])
