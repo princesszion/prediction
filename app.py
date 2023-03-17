@@ -26,11 +26,7 @@ with col1:
     ldm = st.slider('ldm', 10, 50, 100)
     lf = st.slider('lf', 10, 50, 100)
     cf = st.slider('cf', 10, 50, 100)
-    lm = st.slider('lm', 10, 50, 100)
-    rm = st.slider('rm', 10, 50, 100)
-    rwb = st.slider('rwb', 10, 50, 100)
-    rw = st.slider('rw', 10, 50, 100)
-    lw = st.slider('lw', 10, 50, 100)
+
 
 
 with col2:
@@ -82,13 +78,13 @@ rdm,
 cdm,
 ldm,
 lf,
-cf,
-lm,
-rm,
-rwb,
-lwb,
-rw,
-lw,
+# cf,
+# lm,
+# rm,
+# rwb,
+# lwb,
+# rw,
+# lw,
  international_reputation,
  skill_ball_control,
  age,
