@@ -20,7 +20,7 @@ with col1:
     release_clause_eur = st.slider('release_clause_eur', 10, 50, 100)
     attacking_short_passing = st.slider('attacking_short_passing', 10, 50, 100)
     skill_long_passing = st.slider('skill_long_passing', 10, 50, 100)
-rs = st.slider('rs', 10, 50, 100)
+    rs = st.slider('rs', 10, 50, 100)
     rdm = st.slider('rdm', 10, 50, 100)
     cdm = st.slider('cdm', 10, 50, 100)
     ldm = st.slider('ldm', 10, 50, 100)
