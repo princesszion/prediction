@@ -54,7 +54,7 @@ with col2:
     #lwb = st.slider('lwb', 10, 50, 100)
     #lwb = st.number_input('lwb ')
 
-    rw = st.slider('rw', 10, 50, 100)
+    bw = st.slider('bw', 10, 50, 100)
     lw = st.slider('lw', 10, 50, 100)
 
 
