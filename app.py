@@ -35,6 +35,7 @@ with col2:
     skill_curve = st.slider('skill_curve', 10, 50, 100)
     power_long_shots = st.slider('power_long_shots', 10, 50, 100)
     mentality_vision = st.slider('mentality_vision', 10, 50, 100)
+    rcm = st.slider('rcm', 10, 50, 100)
 
 
     if st.button("Predict Player"):
@@ -52,6 +53,7 @@ with col2:
  skill_long_passing,
  physic,
  ls,
+ rcm,
  international_reputation,
  skill_ball_control,
  age,
