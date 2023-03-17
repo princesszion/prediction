@@ -36,6 +36,23 @@ with col2:
     power_long_shots = st.slider('power_long_shots', 10, 50, 100)
     mentality_vision = st.slider('mentality_vision', 10, 50, 100)
     rcm = st.slider('rcm', 10, 50, 100)
+    lcm = st.slider('lcm', 10, 50, 100)
+    cm = st.slider('cm', 10, 50, 100)
+    ram = st.slider('ram', 10, 50, 100)
+    cam = st.slider('cam', 10, 50, 100)
+    st = st.slider('st', 10, 50, 100)
+    rs = st.slider('rs', 10, 50, 100)
+    rdm = st.slider('rdm', 10, 50, 100)
+    cdm = st.slider('cdm', 10, 50, 100)
+    ldm = st.slider('ldm', 10, 50, 100)
+    lf = st.slider('lf', 10, 50, 100)
+    cf = st.slider('cf', 10, 50, 100)
+    lm = st.slider('lm', 10, 50, 100)
+    rm = st.slider('rm', 10, 50, 100)
+    rwb = st.slider('rwb', 10, 50, 100)
+    lwb = st.slider('lwb', 10, 50, 100)
+    rw = st.slider('rw', 10, 50, 100)
+    lw = st.slider('lw', 10, 50, 100)
 
 
     if st.button("Predict Player"):
@@ -54,6 +71,23 @@ with col2:
  physic,
  ls,
  rcm,
+lcm,
+cm,
+ram,
+cam,
+st,
+rs,
+rdm,
+cdm,
+ldm,
+lf,
+cf,
+lm,
+rm,
+rwb,
+lwb,
+rw,
+lw,
  international_reputation,
  skill_ball_control,
  age,
