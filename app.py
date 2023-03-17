@@ -20,6 +20,18 @@ with col1:
     release_clause_eur = st.slider('release_clause_eur', 10, 50, 100)
     attacking_short_passing = st.slider('attacking_short_passing', 10, 50, 100)
     skill_long_passing = st.slider('skill_long_passing', 10, 50, 100)
+rs = st.slider('rs', 10, 50, 100)
+    rdm = st.slider('rdm', 10, 50, 100)
+    cdm = st.slider('cdm', 10, 50, 100)
+    ldm = st.slider('ldm', 10, 50, 100)
+    lf = st.slider('lf', 10, 50, 100)
+    cf = st.slider('cf', 10, 50, 100)
+    lm = st.slider('lm', 10, 50, 100)
+    rm = st.slider('rm', 10, 50, 100)
+    rwb = st.slider('rwb', 10, 50, 100)
+    lwb = st.slider('lwb', 10, 50, 100)
+    rw = st.slider('rw', 10, 50, 100)
+    lw = st.slider('lw', 10, 50, 100)
 
 
 with col2:
@@ -41,18 +53,6 @@ with col2:
     ram = st.slider('ram', 10, 50, 100)
     cam = st.slider('cam', 10, 50, 100)
     st = st.slider('st', 10, 50, 100)
-    rs = st.slider('rs', 10, 50, 100)
-    rdm = st.slider('rdm', 10, 50, 100)
-    cdm = st.slider('cdm', 10, 50, 100)
-    ldm = st.slider('ldm', 10, 50, 100)
-    lf = st.slider('lf', 10, 50, 100)
-    cf = st.slider('cf', 10, 50, 100)
-    lm = st.slider('lm', 10, 50, 100)
-    rm = st.slider('rm', 10, 50, 100)
-    rwb = st.slider('rwb', 10, 50, 100)
-    lwb = st.slider('lwb', 10, 50, 100)
-    rw = st.slider('rw', 10, 50, 100)
-    lw = st.slider('lw', 10, 50, 100)
 
 
     if st.button("Predict Player"):
