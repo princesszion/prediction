@@ -92,7 +92,7 @@ with col2:
         lw,
         shooting
         ]]))
-        st.text(result[0])
+        st.text(float(result[0]))
 
 
 
