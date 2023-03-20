@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import prediction as pred
-
+from prediction import predict_data
 st.title('Player Ratings')
 st.markdown('Enter proposed values to predict player rating')
 
@@ -52,7 +51,7 @@ with col2:
     shooting = st.slider('shooting ', 10, 50, 100)
 
     if st.button("Predict Player"):
-        result = pred.predict_data(np.array([[
+        result = predict_data(np.array([[
             movement_reactions,
             mentality_composure,
             passing,
