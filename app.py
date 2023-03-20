@@ -52,7 +52,7 @@ with col2:
     shooting = st.slider('shooting ', 10, 50, 100)
 
     if st.button("Predict Player"):
-        result = predict(np.array([[
+        result = float(predict(np.array([[
             movement_reactions,
             mentality_composure,
             passing,
@@ -91,10 +91,5 @@ with col2:
         rw,
         lw,
         shooting
-        ]]))
-        st.text(float(result[0]))
-
-
-
-
-
+        ]])))
+        st.text(result[0])
