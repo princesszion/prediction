@@ -52,7 +52,7 @@ with col2:
     shooting = st.slider('shooting ', 10, 50, 100)
 
     if st.button("Predict Player"):
-        result = pred.predict(np.array([[
+        result = pred.predict_data(np.array([[
             movement_reactions,
             mentality_composure,
             passing,
