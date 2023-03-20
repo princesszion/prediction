@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from prediction import predict_data
+import joblib
+#from prediction import predict_data
 st.title('Player Ratings')
 st.markdown('Enter proposed values to predict player rating')
 
@@ -50,6 +51,10 @@ with col2:
     lw = st.slider('lw', 10, 50, 100)
     shooting = st.slider('shooting ', 10, 50, 100)
 
+
+    def predict_data(data):
+        clf = joblib.load("rf_model.sav")
+        return clf.predict(data)
     if st.button("Predict Player"):
         result = predict_data(np.array([[
             movement_reactions,
