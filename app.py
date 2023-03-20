@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from prediction import predict
+import prediction as pred
 
 st.title('Player Ratings')
 st.markdown('Enter proposed values to predict player rating')
@@ -52,7 +52,7 @@ with col2:
     shooting = st.slider('shooting ', 10, 50, 100)
 
     if st.button("Predict Player"):
-        result = float(predict(np.array([[
+        result = pred.predict(np.array([[
             movement_reactions,
             mentality_composure,
             passing,
@@ -91,5 +91,10 @@ with col2:
         rw,
         lw,
         shooting
-        ]])))
+        ]]))
         st.text(result[0])
+
+
+
+
+
