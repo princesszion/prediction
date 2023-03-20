@@ -54,7 +54,7 @@ with col2:
         def predict_data(data):
             clf = joblib.load("rf_model.sav")
             return clf.predict(data)
-        result = predict_data(np.array([[
+        result = predict_data(np.array([
             movement_reactions,
             mentality_composure,
             passing,
@@ -93,7 +93,7 @@ with col2:
         rw,
         lw,
         shooting
-        ]]))
+        ]))
         st.text(result[0])
 
 
