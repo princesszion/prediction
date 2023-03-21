@@ -51,10 +51,7 @@ with col2:
     lw = st.slider('lw', 10, 50, 100)
     shooting = st.slider('shooting ', 10, 50, 100)
     if st.button("Predict Player"):
-        def predict_data(data):
-            clf = joblib.load("rf_model.sav")
-            return clf.predict(data)
-        result = predict_data(np.array([
+        in_data = [
             movement_reactions,
             mentality_composure,
             passing,
@@ -75,7 +72,7 @@ with col2:
             cam,
             physic,
             ls,
-            st,
+            st_slider,
             rs,
             rdm,
             cdm,
@@ -93,7 +90,11 @@ with col2:
         rw,
         lw,
         shooting
-        ]))
+        ]
+        def predict_data(data):
+            clf = joblib.load("rf_model.sav")
+            return clf.predict(data)
+        result = predict_data([in_data])
         st.text(result[0])
 
 
